@@ -1,4 +1,5 @@
 from project import db
+
 #creating models
 class User(db.Model):
     id=db.Column(db.Integer, primary_key=True) #setting id to primary key; meaning that it cannot be duplicated
@@ -7,5 +8,5 @@ class User(db.Model):
     balance=db.Column(db.Integer)
 
     def __repr__(self):
-        return f"User(id='{self.id}', pin='{self.pin}', name='{self.name}', balance='{self.balance}' )"
+        return f"User(id={self.id}, pin={self.pin}, name='{self.name}', balance={self.balance} )"
 
